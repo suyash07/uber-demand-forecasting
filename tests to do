@@ -1,0 +1,14 @@
+Here's your statistical EDA checklist for the Uber project:
+
+ Shapiro-Wilk — test if demand distribution is normal
+ Mann-Whitney U test — weekend vs weekday demand, is the difference real?
+ Spearman correlation — which features actually correlate with demand?
+ ACF/PACF plots — which lags are statistically significant (replaces guessing)
+ ADF test — is your demand series stationary or does it have a trend?
+ Zone comparison — t-test or Mann-Whitney between high vs low demand zones
+
+All doable in Python with scipy.stats and statsmodels. Come back when you've run these and I'll help you interpret the results.
+
+pairplot
+
+# https://github.com/YannisPap/Exploring-Uber-Demand/blob/master/exploring_uber_demand.md
