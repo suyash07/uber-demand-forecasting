@@ -12,3 +12,14 @@ All doable in Python with scipy.stats and statsmodels. Come back when you've run
 pairplot
 
 # https://github.com/YannisPap/Exploring-Uber-Demand/blob/master/exploring_uber_demand.md
+
+
+
+
+Data cleaning — pandas: read_csv, .info(), .isna().sum(), .drop_duplicates(), .fillna()/.dropna(), .astype(), pd.to_datetime(). Fix types, nulls, dupes first.
+EDA — pandas .describe(), .value_counts(), .corr(); visualize with matplotlib/seaborn (histplot, boxplot, lineplot for trend over time).
+Feature engineering — pandas .dt (hour, dayofweek, month), .groupby().transform(), .rolling() for lag/rolling-mean demand features, pd.get_dummies() for categoricals. Lags/rolling are the big ones for forecasting.
+Split by time — sklearn train_test_split(shuffle=False) or a manual chronological cut. Never random — demand is temporal.
+Model train — xgboost XGBRegressor; wrap preprocessing in sklearn Pipeline + ColumnTransformer.
+Cross-validation — sklearn TimeSeriesSplit with cross_val_score; tune via GridSearchCV/RandomizedSearchCV using that CV.
+Metrics/statistics — sklearn mean_absolute_error, root_mean_squared_error, r2_score; xgboost .feature_importances_; scipy/statsmodels if you want residual diagnostics.

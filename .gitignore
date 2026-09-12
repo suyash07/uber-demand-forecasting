@@ -43,3 +43,10 @@ Thumbs.db
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Generated model outputs
+*.joblib
+*_meta.json
+
+# Generated assistant drafts and reports
+Claude outputs/
